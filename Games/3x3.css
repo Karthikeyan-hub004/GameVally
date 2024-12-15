@@ -1,0 +1,100 @@
+*{
+    color: whitesmoke;
+    font-family: serif;
+    transition: 0.5s ease-in-out;
+    user-select: none;
+    text-transform: capitalize;
+}
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+    text-align: center;
+    padding-top: 5vh;
+}
+.turn{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+.turn h2{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.turn .turnbox{
+    border: 3px solid rgb(207, 189, 189);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+.turn.turnbox:nth-child(even){
+         border-right: none;
+}
+.alg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:85px;
+    height: 40px;
+    background-color: aqua;
+    z-index: -1;
+}
+.mainbox{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    height: 250px;
+    width: 250px;
+    margin: 30px auto;
+    border: 2px solid white ;
+}
+.box{
+    
+    cursor: pointer;
+    font-size:2rem;
+    font-weight: 700;
+    border: 2px solid white;
+    color: rgb(0, 47, 255);
+}
+.box:hover{
+    background-color: rgb(248, 250, 237);
+    transition: 2s;
+}
+#play{
+    background-color: green;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#play:hover{
+    padding: 10px 40px;
+    background-color: greenyellow;
+    color: black;
+}
+#scores {
+    display: inline-block;
+}
+#scores p{
+    border: 2px solid violet;
+    padding: 5%;
+    font-weight: 900;
+    font-size: larger;
+}
+#back{
+    display: inline;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 10px;
+}
