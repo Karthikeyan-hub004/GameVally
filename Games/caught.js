@@ -26,15 +26,6 @@ function moveGoat(direction) {
 
 
 
-document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowLeft' && goatPosition > 0) {
-        goatPosition -= 20;
-    } else if (event.key === 'ArrowRight' && goatPosition < 250) {
-        goatPosition += 20;
-    }
-    goat.style.left = `${goatPosition}px`;
-});
-
 function startGame() {
     // Place initial objects randomly
     resetObject(leaf, 'leaf');
