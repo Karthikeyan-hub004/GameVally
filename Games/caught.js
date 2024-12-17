@@ -7,9 +7,6 @@ let goatPosition = 120; // Starting position of the goat
 let gameInterval;
 let gameSpeed = 5; // Speed of object movement
 
-let goatPosition = 125; // Initial position of the goat
-const goat = document.getElementById('goat');
-
 // Function to move the goat
 function moveGoat(direction) {
     if (direction === 'left' && goatPosition > 0) {
@@ -21,8 +18,8 @@ function moveGoat(direction) {
 }
 
 // Adding event listeners to buttons
-document.querySelector('button[onclick="moveGoat(\'left\')"]').addEventListener('click', () => moveGoat('left'));
-document.querySelector('button[onclick="moveGoat(\'right\')"]').addEventListener('click', () => moveGoat('right'));
+document.getElementById('moveLeftBtn').addEventListener('click', () => moveGoat('left'));
+document.getElementById('moveRightBtn').addEventListener('click', () => moveGoat('right'));
 
 function startGame() {
     // Place initial objects randomly
