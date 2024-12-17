@@ -34,14 +34,21 @@ function startGame() {
 }
 
 function moveObject(object, type) {
+    // Get the current top position of the object
     let objectTop = parseInt(window.getComputedStyle(object).getPropertyValue('top'));
+    console.log('Current top position:', objectTop); // Debugging log
 
-    if (objectTop >= 600) { // If object goes off the screen, reset it
+    // If the object goes off the screen, reset it
+    if (objectTop >= 600) {
+        console.log(`Resetting ${type} because it's off the screen`); // Debugging log
         resetObject(object, type);
     } else {
+        // Move the object down by the game speed
         object.style.top = `${objectTop + gameSpeed}px`;
+        console.log(`${type} new position: ${object.style.top}`); // Debugging log
     }
 }
+
 
 function resetObject(object, type) {
     object.style.top = '-50px'; // Start off screen at the top
