@@ -2,27 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Goku</title>
-    <link rel="stylesheet" href="caught.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goat Game</title>
+    <style>
+        .game-area {
+            position: relative;
+            width: 300px;
+            height: 600px;
+            border: 1px solid #000;
+        }
+        .goat {
+            position: absolute;
+            width: 20px;
+            height: 50px;
+            background-color: blue;
+            bottom: 20px;
+            left: 120px; /* Starting position of the goat */
+            border-radius: 50%;
+        }
+        .object {
+            position: absolute;
+            top: -50px; /* Start off screen at the top */
+        }
+        .leaf {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+        }
+        .bike {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+        }
+        .score {
+            font-size: 20px;
+            margin-top: 20px;
+            color: white;
+            background-color: #333;
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 <body>
-   
     <div class="game-area">
-        <div class="road">
-            <div class="goat" id="goat">
-                <img src="tunnel.png" alt="">
-            </div>
-            <div class="object leaf" id="leaf">
-                <img src="ball.png" alt="">
-            </div>
-            <div class="object bike" id="bike">
-                <img src="flight.png" alt="">
-            </div>
-        </div>   
-    </div><div class="button">
-    <button onclick="moveGoat('left')">Move Left</button>
-         <button onclick="moveGoat('right')">Move Right</button></div>
-    <div class="score">Score: <span id="score">0</span></div>
-<script src="caught.js"></script>
-</body> 
+        <div class="goat" id="goat"></div>
+        <div class="object leaf" id="leaf"></div>
+        <div class="object bike" id="bike"></div>
+    </div>
+    <button id="moveLeftBtn">Move Left</button>
+    <button id="moveRightBtn">Move Right</button>
+    <div id="score" class="score">0</div>
+
+    <script src="script.js"></script>
+</body>
 </html>
