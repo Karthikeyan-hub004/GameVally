@@ -7,7 +7,6 @@ let score = 0;
 let goatPosition = 120; // Starting position of the goat
 let gameInterval;
 let gameSpeed = 5; // Speed of object movement
-let GameOver=document.getElementById('gameOver img');
 let goatPosition = 125; // Initial position of the goat
 const goat = document.getElementById('goat');
 // Move buttons
