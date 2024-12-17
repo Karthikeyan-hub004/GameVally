@@ -3,10 +3,28 @@ const leaf = document.getElementById('leaf');
 const bike = document.getElementById('bike');
 const scoreDisplay = document.getElementById('score');
 let score = 0;
+
 let goatPosition = 120; // Starting position of the goat
 let gameInterval;
 let gameSpeed = 5; // Speed of object movement
 let GameOver=document.getElementById('gameOver img');
+let goatPosition = 125; // Initial position of the goat
+const goat = document.getElementById('goat');
+// Move buttons
+document.querySelector('button[onclick="moveGoat(\'left\')"]').addEventListener('click', () => moveGoat('left'));
+document.querySelector('button[onclick="moveGoat(\'right\')"]').addEventListener('click', () => moveGoat('right'));
+
+// Function to move the goat
+function moveGoat(direction) {
+    if (direction === 'left' && goatPosition > 0) {
+        goatPosition -= 20;
+    } else if (direction === 'right' && goatPosition < 250) {
+        goatPosition += 20;
+    }
+    goat.style.left = `${goatPosition}px`;
+}
+
+
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft' && goatPosition > 0) {
