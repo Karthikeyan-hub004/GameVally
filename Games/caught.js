@@ -78,4 +78,4 @@ function checkCollision() {
 }
 
 // Start the game when the page loads
-window.onload = startGame;
+window.onloadstartd = startGame;
