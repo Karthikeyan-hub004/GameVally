@@ -3,7 +3,7 @@ const leaf = document.getElementById('leaf');
 const bike = document.getElementById('bike');
 const scoreDisplay = document.getElementById('score');
 let score = 0;
-let goatPosition = 120; // Starting position of the goat
+let goatPosition = 100; // Starting position of the goat
 let gameInterval;
 let gameSpeed = 5; // Speed of object movement
 
