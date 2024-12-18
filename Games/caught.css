@@ -83,32 +83,84 @@ body {
 
 /* Media query for mobile screens */
 @media (max-width: 600px){
-    *{
-        background-color: yellowgreen;
-    }
-    .game-area {
-        width: 100%;
-        height: 80vh;
+    body {
         margin: 0;
-        border-width: 2px;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
     }
+    
+    .game-area {
+        position: relative;
+        width: 600px;
+        height: 1700px;
+        border: 5px solid #333;
+        overflow: hidden;
+        background-color: #222;
+    }
+    
+    .road {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        background-image: url("sky.jpg");
+    }
+    
+    
+    
     .goat {
+        position: absolute;
         width: 20px;
         height: 50px;
-        bottom: 10px;
-        left: calc(50% - 10px); /* Adjusted for smaller width */
+        /* background-color: blue; */
+        bottom: 20px;
+        left: 125px;
+        border-radius: 50%;
+        display: flex;
     }
+    
+    .goat img {
+        transform: scale(2);
+    }
+    
     .object {
-        width: 20px;
-        height: 20px;
+        position: absolute;
+        width: 70px;
+        height: 150px;
+        top: -50px; /* Start off screen */
     }
-    .leaf,
+    
+    .leaf {
+        /* background-color: gold; */
+        border-radius: 50%;
+        display: flex;
+        width: 100px;
+        height: 40px;
+    
+    }
+    
     .bike {
-        width: 20px;
-        height: 20px;
+        border-radius: 10%;
+        display: flex;
+        width: 100px;
+        height: 100px;
     }
+    
     .score {
-        font-size: 16px;
-        padding: 5px;
+        font-size: 20px;
+        margin-top: 20px;
+        color: white;
+        background-color: #333;
+        padding: 5px 10px;
+    }
+    .button{
+        display: flex;
+        gap: 5%;
+        width: 100px;
+        height: 60px;
     }
 }
