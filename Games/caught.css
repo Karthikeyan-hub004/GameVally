@@ -159,8 +159,9 @@ body {
     }
     .button{
         display: flex;
-        gap: 5%;
+        gap: 15%;
         width: 100px;
         height: 60px;
+        font-size: 60px;
     }
 }
