@@ -7,7 +7,8 @@ let goatPosition = 120; // Starting position of the goat
 let gameInterval;
 let gameSpeed = 5; // Speed of object movement
 
-// Function to move the goat
+
+
 function moveGoat(direction) {
     if (direction === 'left' && goatPosition > 0) {
         goatPosition -= 20;
@@ -16,6 +17,16 @@ function moveGoat(direction) {
     }
     goat.style.left = `${goatPosition}px`;
 }
+
+
+document.getElementById('startGameBtn').addEventListener('click', startGame);
+
+function startGame() {
+    // Place initial objects randomly
+    resetObject(leaf, 'leaf');
+    resetObject
+}
+
 
 // Adding event listeners to buttons
 document.getElementById('moveLeftBtn').addEventListener('click', () => moveGoat('left'));
@@ -35,14 +46,11 @@ function startGame() {
 
 function moveObject(object, type) {
     let objectTop = parseInt(window.getComputedStyle(object).getPropertyValue('top'));
-    console.log(`${type} current top position:`, objectTop); // Debugging log
 
-    if (objectTop >= 600) {
-        console.log(`Resetting ${type} because it's off the screen`); // Debugging log
+    if (objectTop >= 600) { // If object goes off the screen, reset it
         resetObject(object, type);
     } else {
         object.style.top = `${objectTop + gameSpeed}px`;
-        console.log(`${type} new position: ${object.style.top}`); // Debugging log
     }
 }
 
@@ -77,5 +85,4 @@ function checkCollision() {
     }
 }
 
-// Start the game when the page loads
-window.onloadstartd = startGame;
+startGame();
