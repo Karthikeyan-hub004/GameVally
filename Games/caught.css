@@ -82,7 +82,7 @@ body {
 
 
 /* Media query for mobile screens */
-@media (min-width: 600px){
+@media (max-width: 600px){
     *{
         background-color: yellowgreen;
     }
