@@ -138,16 +138,16 @@ body {
         /* background-color: gold; */
         border-radius: 50%;
         display: flex;
-        width: 100px;
-        height: 40px;
+        width: 200px;
+        height: 80px;
     
     }
     
     .bike {
         border-radius: 10%;
         display: flex;
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
     }
     
     .score {
