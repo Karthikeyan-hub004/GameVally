@@ -5,7 +5,7 @@ const scoreDisplay = document.getElementById('score');
 let score = 0;
 let goatPosition = 120; // Starting position of the goat
 let gameInterval;
-let gameSpeed = 5; // Speed of object movement
+let gameSpeed =10; // Speed of object movement
 
 
 
@@ -47,7 +47,7 @@ function startGame() {
 function moveObject(object, type) {
     let objectTop = parseInt(window.getComputedStyle(object).getPropertyValue('top'));
 
-    if (objectTop >= 600) { // If object goes off the screen, reset it
+    if (objectTop >=1200) { // If object goes off the screen, reset it
         resetObject(object, type);
     } else {
         object.style.top = `${objectTop + gameSpeed}px`;
