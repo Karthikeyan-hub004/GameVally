@@ -47,7 +47,7 @@ function startGame() {
 function moveObject(object, type) {
     let objectTop = parseInt(window.getComputedStyle(object).getPropertyValue('top'));
 
-    if (objectTop >=1000) { // If object goes off the screen, reset it
+    if (objectTop >=800) { // If object goes off the screen, reset it
         resetObject(object, type);
     } else {
         object.style.top = `${objectTop + gameSpeed}px`;
@@ -85,4 +85,4 @@ function checkCollision() {
     }
 }
 
-startGame();
+
