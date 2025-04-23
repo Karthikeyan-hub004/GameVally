@@ -25,6 +25,7 @@ function startGame() {
     // Place initial objects randomly
     resetObject(leaf, 'leaf');
     resetObject
+    startGameBtn.style.display = 'none'; // Hide the start button
 }
 
 
@@ -82,6 +83,7 @@ function checkCollision() {
         clearInterval(gameInterval);
         alert('Game Over! Your Score: ' + score);
         window.location.reload();
+        startGameBtn.style.display = 'block'; // Show the start button again
     }
 }
 
